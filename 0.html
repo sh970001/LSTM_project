@@ -70,6 +70,15 @@
                 </div>
             </li>
             <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="5.html">
+                    <i class="fas fa-fw fa-caret-right"></i>                   
+                    <span>研究結果</span>
+                </a>
+            </li>
+            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
         </ul>
         <!-- End of Sidebar -->
@@ -106,14 +115,45 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800"><b><font size="50" color="black">研究方法</font></b></h1>
                     </div>
-                    <div class="row2">
+                    <div class="row1">
                         <!-- 研究方法 -->
                         <div class="card shadow mb-4">
                             <!-- Card Content - Collapse -->
                             <div class="collapse show" id="collapseCard1" style="overflow:auto">
-                                <div class="card-body" style="text-indent:3.8em">
-                                    <img src="img\LSTM.PNG"><br>
+                                <div class="card-body">
+                                    <img src="img\0\project_process.png"><br>
                                 </div>
+
+                                <hr class="sidebar-divider d-none d-md-block">
+                                <div class="card-body"><b><font size="6" color="black">實驗過程</font></b></div>
+                                <hr class="sidebar-divider d-none d-md-block">
+                                <div class="card-body">
+                                    <b>
+                                    <font size="6" color="black">
+                                        1. 選擇部分產業的股票,並選擇該產業其中幾支股票。<br>
+                                        2. 下載近 5 年內(2018-2022)週線數據。<br>
+                                        3. 選擇收盤價(close)做 LSTM 分析。<br>
+                                        4. 將訓練好的模型以圖形方式展現。<br>
+                                        5. 重複修改 LSTM 之參數(epochs, hidden size, 訓練集, 測試集, 訓練集與測試集的重疊量),使預測線逐漸趨近實際數值。<br>
+                                    </font>
+                                    </b>
+                                </div>
+
+                                <hr class="sidebar-divider d-none d-md-block">
+                                <div class="card-body"><b><font size="6" color="black">補充：重疊量</font></b></div>
+                                <hr class="sidebar-divider d-none d-md-block">
+                                <div class="card-body">
+                                    <img src="img\0\data_choose.png"><br>
+                                    <b>
+                                    <font size="6" color="black">
+                                        <br>
+                                        實驗中，除了我們直接抓圖中黑色的數據來分成訓練集與測試集(例如：訓練集為1-6，測試集為7-12)以外，我們也會將訓練集與測試集重疊的情況來做測試，進而觀察<font color='red'>若數據重疊是否會影響到實驗結果</font>。<br>
+                                        <br>
+                                        如圖：我們抓了數據的1-8作為訓練集(紅色)，另外還抓了數據5-12做為測試集(藍色)，其中訓練集與測試集重疊處我們將它稱為<font color='red'>重疊量</font>，圖中重疊量為4。
+                                    </font>
+                                    </b>
+                                </div>
+
                             </div>
                         </div>
                     </div>
